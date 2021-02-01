@@ -148,7 +148,7 @@ void ArrayTest::testConstruction() {
 
     // assignment from disposable
     Array temp3(size, value);
-    Disposable<Array> temp4(temp3);
+    const Disposable<Array>& temp4(temp3);
     Array a9;
     a9 = temp4;
     if (a9.size() != size || !temp4.empty())
